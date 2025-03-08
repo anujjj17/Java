@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/anujjj17/java.git'
+                git 'https://github.com/anujjj17/Java.git'
             }
         }
 
@@ -14,15 +14,9 @@ pipeline {
             }
         }
 
-        stage('Test') {
+        stage('Run') {
             steps {
                 sh 'java Calculator'
-            }
-        }
-
-        stage('Deploy') {
-            steps {
-                echo 'Deployment step (Define as needed)'
             }
         }
     }
